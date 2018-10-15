@@ -1,0 +1,28 @@
+<div class="input-width">
+    <div class="btn-group nav-buttons" role="group" aria-label="Basic example">
+        <button type="button" class="btn button-green">Login</button>
+        <button type="button" class="btn btn-secondary" routerLink="/create-account">Sign Up</button>
+    </div>
+
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text label-width" for="username">Username: </label>
+        </div>
+        <input class="form-control" id="username" [(ngModel)]="username">
+    </div> 
+    
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text label-width" for="password">Password: </label>
+        </div>
+        <input class="form-control" id="password" [(ngModel)]="password">
+    </div>
+
+    <br />
+    <span class="submit-button">
+        <button (click)="submit()" routerLink="/" class="btn button-green">Submit</button>
+    </span>
+    <span class="cancel-button">
+        <button routerLink="/" class="btn button-green">Cancel</button>
+    </span>
+</div>

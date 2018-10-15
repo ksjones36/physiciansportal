@@ -1,0 +1,48 @@
+<div class="container table-padding">
+  <!-- <h2>Patients</h2> -->
+  <span class="patient-text">Patients</span>
+  <button type="button" class="btn add-patient-button" routerLink="/add-patient">Add Patient</button>
+  <div class="table-div">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Age</th>
+      <th>Sex</th>
+      <th>Cancer Type</th>
+      <th>Cancer Stage</th>
+      <th>Submission Date</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of patients">
+        <td>{{patient.lastName}}</td>
+        <td>{{patient.firstName}}</td>
+        <td>{{patient.age}}</td>
+        <td>{{patient.sex}}</td>
+        <td>{{patient.cancerType}}</td>
+        <td>{{patient.cancerStage}}</td>
+        <td>{{patient.submissionDate | date: shortDate}}</td>
+        <td>
+          <div class="btn-group">
+            <button type="button" class="btn dropdown-toggle table-button" 
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              More <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu padding-left">
+                <li><a [routerLink]="['/pdf', patient.id]">View Report</a></li>
+                <li><a href="#">Billing</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#editPatientModal" (click)="selectPatient(patient)">Edit Patient</a>
+              </li>
+              </ul>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<div class="modal fade" id="editPatientModal">
+  <app-edit-patient [patientId]="selectedPatient.id" (updateTable)="ngOnInit()"></app-edit-patient>
+</div>

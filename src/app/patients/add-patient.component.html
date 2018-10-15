@@ -1,0 +1,60 @@
+<div class="input-width">
+  <span class="add-text">Add Patient</span>
+
+  <div class="input-group">
+      <div class="input-group-prepend">
+          <label class="input-group-text label-width" for="firstName">First Name: </label>
+      </div>
+      <input class="form-control" id="firstName" [(ngModel)]="patient.firstName">
+  </div> 
+
+  <div class="input-group">
+      <div class="input-group-prepend">
+          <label class="input-group-text label-width" for="lastName">Last Name: </label>
+      </div>
+      <input class="form-control" id="lastName" [(ngModel)]="patient.lastName">
+  </div>
+  
+  <div class="input-group">
+      <div class="input-group-prepend">
+          <label class="input-group-text label-width" for="age">Age: </label>
+      </div>
+      <input id="age" class="form-control" [(ngModel)]="patient.age" type="number">
+  </div>
+
+  <div class="input-group">
+    <div class="input-group-prepend">
+        <label class="input-group-text label-width" for="sex">Sex:  &nbsp;</label>
+    </div>
+    <select class="custom-select" id="sex" [(ngModel)]="patient.sex">
+      <option *ngFor="let sex of sexOptions" [ngValue]="sex">{{sex}}</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <div class="input-group-prepend">
+        <label class="input-group-text label-width" for="cancerType">Cancer Type:  &nbsp;</label>
+    </div>
+    <select class="custom-select" id="cancerType" [(ngModel)]="patient.cancerType">
+      <option *ngFor="let type of cancerTypes" [ngValue]="type">{{type}}</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <div class="input-group-prepend">
+        <label class="input-group-text label-width" for="cancerStage">Cancer Stage:  &nbsp;</label>
+    </div>
+    <select class="custom-select" id="cancerStage" [(ngModel)]="patient.cancerStage">
+      <option *ngFor="let stage of cancerStages" [ngValue]="stage">{{stage}}</option>
+    </select>
+  </div>
+
+  <br />
+  <span class="submit-button">
+      <button (click)="addNew()" routerLink="/" class="btn button-green">Submit</button>
+  </span>
+  <span class="cancel-button">
+      <button routerLink="/" class="btn button-green">Cancel</button>
+  </span>
+</div>
+

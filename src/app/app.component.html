@@ -1,0 +1,34 @@
+<nav class="navbar bavbar-default navbar-static-top top-bar">
+  <div class="container-fluid container">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink]="['/']">
+        <img alt="Genomic Health" [src]="logo" class="img-height" />
+      </a>
+    </div>
+    <div class="navbar-right btn-group" *ngIf="userName !== null">
+      <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        {{userName}} 
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu ul-padding">
+        <li><a href="#">Options</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a (click)="logout()" routerLink="/login">Logout</a></li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer class="footer foot font-small col-lg-12">
+  <div  class="footer-copuright text-center py-3">
+      In the US and certain other jurisdictions, Genomic Health, Oncotype DX, Oncotype IQ, 
+      and Recurrence Score are registered trademarks, 
+      and Genomic Prostate Score, and AR-V7 Nucleus Detect are pending registered trademarks, 
+      of Genomic Health, Inc. <br />
+      All text and logos copied from Genomic Health webpage for a personal project. 
+      All rights go to Genomic and other respective companies.
+  </div>
+</footer>

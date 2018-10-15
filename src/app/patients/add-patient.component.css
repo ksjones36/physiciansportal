@@ -1,0 +1,29 @@
+.button-green {
+    color: white;
+    background-color: rgb(108,179,64);
+}
+
+.input-width {
+    padding-right: 35%;
+    padding-left: 35%;
+    padding-top:20px
+}
+
+.add-text {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.label-width {
+    width: 120px;
+    text-align: center;
+}
+
+.submit-button {
+    padding-left: 10px;
+}
+
+.cancel-button {
+    float: right;
+    padding-right: 10px;
+}

@@ -1,0 +1,54 @@
+<div class="input-width">
+    <div class="btn-group nav-buttons" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary" routerLink="/login">Login</button>
+        <button type="button" class="btn button-green">Sign Up</button>
+    </div>
+
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text label-width" for="firstName">First Name: </label>
+        </div>
+        <input class="form-control" id="firstName" [(ngModel)]="physician.firstName">
+    </div> 
+    
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text label-width" for="lastName">Last Name: </label>
+        </div>
+        <input class="form-control" id="lastName" [(ngModel)]="physician.lastName">
+    </div>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text label-width" for="username">Username: </label>
+        </div>
+        <input class="form-control" id="username" [(ngModel)]="physician.username">
+    </div>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text label-width" for="password">Password: </label>
+        </div>
+        <input class="form-control" id="password" [(ngModel)]="physician.password" type="password">
+    </div>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text label-width" for="email">Email: </label>
+        </div>
+        <input class="form-control" id="email" [(ngModel)]="physician.email">
+    </div>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <label class="input-group-text label-width" for="phoneNumber">Phone: </label>
+        </div>
+        <input class="form-control" id="phoneNumber" [(ngModel)]="physician.phoneNumber">
+    </div>
+
+
+
+    <br />
+    <span class="submit-button">
+        <button (click)="submit()" routerLink="/" class="btn button-green">Submit</button>
+    </span>
+    <span class="cancel-button">
+        <button routerLink="/" class="btn button-green">Cancel</button>
+    </span>
+</div>

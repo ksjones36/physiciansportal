@@ -1,0 +1,9 @@
+.button-green {
+    color: white;
+    background-color: rgb(108,179,64);
+}
+
+.button-padding {
+    padding-top: 20px;
+    padding-left: 49%;
+}
